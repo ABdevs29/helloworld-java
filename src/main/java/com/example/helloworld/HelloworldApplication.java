@@ -7,11 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HelloworldApplication {
 
     public static void main(String[] args) {
+        Database db = new Database();
+        db.connect();
         SignUp signup = new SignUp();
         Login login = new Login();
 
-        signup.doSomething();
-        login.doSomething();
+        signup.doSomething(db);
+        login.doSomething(db);
     }
 
 }

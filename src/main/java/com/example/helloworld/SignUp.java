@@ -1,9 +1,9 @@
 package com.example.helloworld;
 
 public class SignUp {
-    Database db = new Database();
+    Database db;
 
-    public void doSomething() {
+    public void doSomething(Database db) {
         System.out.println("Signed up!");
     }
 }
